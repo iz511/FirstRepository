@@ -26,5 +26,29 @@
     一定の稼得能力がある者がいることを踏まえれば、
     こうした者とのバランスを考える必要があること等の理由から、
     このような取扱いをしているものです。）
+    
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBkoQIt-IxlrXXmV3ySbJX0dBwSsfnXV4M",
+        authDomain: "heatmap-test-62427.firebaseapp.com",
+        projectId: "heatmap-test-62427",
+        storageBucket: "heatmap-test-62427.appspot.com",
+        messagingSenderId: "958834054816",
+        appId: "1:958834054816:web:bfdb2f46906dd966e79bc5",
+        measurementId: "G-QQWMXSR4ZM"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
