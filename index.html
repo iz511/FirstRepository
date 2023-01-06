@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- GET IPAddress Accesstime -->
+    <script type="text/javascript" src="ga_ipaddress.php?v=1"></script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGP8T40MQE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-PGP8T40MQE');
+      gtag('config', 'G-PGP8T40MQE'),
+        {
+          'custom_map': {
+          'dimension4': 'ip_address',
+          'dimension3': 'access_time',
+        },
+        'ip_address': getIPAddress(),
+        'access_time': getAccessTime(),
+      });
     </script>
     <meta charset="utf-8">
     <title>FirstRepository</title>
