@@ -13,11 +13,11 @@
       gtag('config', 'G-PGP8T40MQE'),
         {
           'custom_map': {
-          'dimension4': 'ip_address',
-          'dimension3': 'access_time',
+          'dimension1': 'ip_address',
+          'dimension2': 'access_time',
         },
-        'ip_address': setAnalytics.getIP(),
-        'access_time': setAnalytics.getTimeStamp(),
+        'ip_address': getIPAddress(),
+        'access_time': getAccessTime(),
       });
     </script>
     <meta charset="utf-8">
