@@ -5,6 +5,7 @@
     <script type="text/javascript" src="./ga_ipaddress.php?v=1"></script>
     
     <!-- Google tag (gtag.js) -->
+    <!-- 'dimension2': 'access_time', --> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGP8T40MQE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,7 +15,9 @@
         {
           'custom_map': {
           'dimension1': 'ip_address',
-          'dimension2': 'access_time',
+          'dimension2': 'ip_address',
+          'dimension3': 'ip_address',
+          'dimension4': 'ip_address'
         },
         'ip_address': getIPAddress(),
         'access_time': getAccessTime(),
