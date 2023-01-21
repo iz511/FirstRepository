@@ -35,12 +35,27 @@
     <!-- End Google Tag Manager -->
 
     <link rel="icon" type="image/png" href="./icon.png">
+    
+    <script>
+      var wm = new WeakMap;
+      var obj = {};
+      callback = data => wm.set(obj, data.ip);
+
+      var script = document.createElement('script');
+      script.src='https://ipinfo.io?callback=callback'
+      document.head.appendChild(script);
+
+      window.onload = () => console.log(wm.get(obj));
+    </script>
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5674PKB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
+    
     
     <h1>FirstRepository</h1>
     
