@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <!-- GET IPAddress Accesstime -->
     <script type="text/javascript" src="./ga_ipaddress.php?v=1"></script>
     
@@ -8,16 +9,28 @@
     <!-- 'dimension2': 'access_time', --> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGP8T40MQE"></script>
     <script>
+      var wm = new WeakMap;
+      var obj = {};
+      callback = data => wm.set(obj, data.ip);
+
+      var script = document.createElement('script');
+      script.src='https://ipinfo.io?callback=callback'
+      document.head.appendChild(script);
+
+      window.onload = () => console.log(wm.get(obj));
+      
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-PGP8T40MQE'),
         {
           'custom_map': {
-          'dimension1': 'ip_address',
-          'dimension2': 'ip_address',
-          'dimension3': 'ip_address',
-          'dimension4': 'ip_address'
+          'dimension1': 'ip',
+          'dimension2': 'ip',
+          'dimension3': 'ip',
+          'dimension4': 'ip',
+          'dimension5': 'ip',
+          'dimension6': 'ip'
         },
         'ip_address': getIPAddress(),
         'access_time': getAccessTime(),
@@ -35,19 +48,8 @@
     <!-- End Google Tag Manager -->
 
     <link rel="icon" type="image/png" href="./icon.png">
+  
     
-    <script>
-      var wm = new WeakMap;
-      var obj = {};
-      callback = data => wm.set(obj, data.ip);
-
-      var script = document.createElement('script');
-      script.src='https://ipinfo.io?callback=callback'
-      document.head.appendChild(script);
-
-      window.onload = () => console.log(wm.get(obj));
-    </script>
-
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
